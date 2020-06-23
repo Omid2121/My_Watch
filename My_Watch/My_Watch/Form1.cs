@@ -30,5 +30,21 @@ namespace My_Watch
                 Application.Exit();
             
         }
+
+        private void countDownButton_Click(object sender, EventArgs e)
+        {
+            CountdownForm openForm = new CountdownForm();
+            openForm.Show();
+            Visible = false;
+        }
+
+
+        private void alarmButton_Click(object sender, EventArgs e)
+        {
+            AlarmForm openForm = new AlarmForm();
+            openForm.Show();
+            Visible = false;
+        }
+
     }
 }

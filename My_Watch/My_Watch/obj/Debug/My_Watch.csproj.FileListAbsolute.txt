@@ -1,7 +1,6 @@
 C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\bin\Debug\My_Watch.exe.config
 C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\bin\Debug\My_Watch.exe
 C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\bin\Debug\My_Watch.pdb
-C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.csprojAssemblyReference.cache
 C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.Properties.Resources.resources
 C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.WatchForm.resources
 C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.csproj.GenerateResource.cache
@@ -10,3 +9,6 @@ C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.ex
 C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.pdb
 C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.Menu.resources
 C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.StopWatchForm.resources
+C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.AlarmForm.resources
+C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.CountdownForm.resources
+C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.csprojAssemblyReference.cache

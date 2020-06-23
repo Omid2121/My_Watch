@@ -14,5 +14,6 @@ namespace My_Watch
         public int hours = 0;
 
         public bool isActive;
+
     }
 }
