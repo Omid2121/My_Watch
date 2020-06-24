@@ -29,5 +29,12 @@ namespace My_Watch
         {
 
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Menu openForm = new Menu();
+            openForm.Show();
+            Visible = false;
+        }
     }
 }

@@ -42,6 +42,7 @@
             this.secondsCB = new System.Windows.Forms.ComboBox();
             this.addSecButton = new System.Windows.Forms.Button();
             this.addMinbutton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // resetButton
@@ -52,7 +53,7 @@
             this.resetButton.ForeColor = System.Drawing.Color.White;
             this.resetButton.Location = new System.Drawing.Point(520, 398);
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(144, 74);
+            this.resetButton.Size = new System.Drawing.Size(144, 58);
             this.resetButton.TabIndex = 4;
             this.resetButton.Text = "reset";
             this.resetButton.UseVisualStyleBackColor = false;
@@ -66,7 +67,7 @@
             this.stopButton.ForeColor = System.Drawing.Color.White;
             this.stopButton.Location = new System.Drawing.Point(370, 398);
             this.stopButton.Name = "stopButton";
-            this.stopButton.Size = new System.Drawing.Size(144, 74);
+            this.stopButton.Size = new System.Drawing.Size(144, 58);
             this.stopButton.TabIndex = 5;
             this.stopButton.Text = "Stop ";
             this.stopButton.UseVisualStyleBackColor = false;
@@ -80,7 +81,7 @@
             this.startButton.ForeColor = System.Drawing.Color.White;
             this.startButton.Location = new System.Drawing.Point(220, 398);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(144, 74);
+            this.startButton.Size = new System.Drawing.Size(144, 58);
             this.startButton.TabIndex = 6;
             this.startButton.Text = "start";
             this.startButton.UseVisualStyleBackColor = false;
@@ -202,12 +203,27 @@
             this.addMinbutton.UseVisualStyleBackColor = false;
             this.addMinbutton.Click += new System.EventHandler(this.addMinbutton_Click);
             // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Black;
+            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Location = new System.Drawing.Point(306, 461);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(278, 56);
+            this.exitButton.TabIndex = 24;
+            this.exitButton.Text = "exit";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // CountdownForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(914, 530);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.addMinbutton);
             this.Controls.Add(this.addSecButton);
             this.Controls.Add(this.secondsCB);
@@ -243,5 +259,6 @@
         private System.Windows.Forms.ComboBox secondsCB;
         private System.Windows.Forms.Button addSecButton;
         private System.Windows.Forms.Button addMinbutton;
+        private System.Windows.Forms.Button exitButton;
     }
 }

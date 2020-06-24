@@ -28,14 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.minutesCB = new System.Windows.Forms.ComboBox();
             this.hourCB = new System.Windows.Forms.ComboBox();
-            this.minutesLabel = new System.Windows.Forms.Label();
-            this.hourLable = new System.Windows.Forms.Label();
+            this.mLabel = new System.Windows.Forms.Label();
+            this.hLabel = new System.Windows.Forms.Label();
             this.editButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.setButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.alarmlistBox = new System.Windows.Forms.ListBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.hourLabel = new System.Windows.Forms.Label();
+            this.minuteLabel = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // minutesCB
@@ -45,7 +51,7 @@
             this.minutesCB.Font = new System.Drawing.Font("LIBRARY 3 AM", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minutesCB.ForeColor = System.Drawing.Color.White;
             this.minutesCB.FormattingEnabled = true;
-            this.minutesCB.Location = new System.Drawing.Point(512, 98);
+            this.minutesCB.Location = new System.Drawing.Point(505, 133);
             this.minutesCB.Name = "minutesCB";
             this.minutesCB.Size = new System.Drawing.Size(155, 32);
             this.minutesCB.TabIndex = 15;
@@ -57,34 +63,34 @@
             this.hourCB.Font = new System.Drawing.Font("LIBRARY 3 AM", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hourCB.ForeColor = System.Drawing.Color.White;
             this.hourCB.FormattingEnabled = true;
-            this.hourCB.Location = new System.Drawing.Point(277, 98);
+            this.hourCB.Location = new System.Drawing.Point(273, 133);
             this.hourCB.Name = "hourCB";
             this.hourCB.Size = new System.Drawing.Size(155, 32);
             this.hourCB.TabIndex = 16;
             // 
-            // minutesLabel
+            // mLabel
             // 
-            this.minutesLabel.AutoSize = true;
-            this.minutesLabel.BackColor = System.Drawing.Color.Black;
-            this.minutesLabel.Font = new System.Drawing.Font("LIBRARY 3 AM", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minutesLabel.ForeColor = System.Drawing.Color.White;
-            this.minutesLabel.Location = new System.Drawing.Point(508, 30);
-            this.minutesLabel.Name = "minutesLabel";
-            this.minutesLabel.Size = new System.Drawing.Size(92, 24);
-            this.minutesLabel.TabIndex = 17;
-            this.minutesLabel.Text = "Minute";
+            this.mLabel.AutoSize = true;
+            this.mLabel.BackColor = System.Drawing.Color.Black;
+            this.mLabel.Font = new System.Drawing.Font("LIBRARY 3 AM", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mLabel.ForeColor = System.Drawing.Color.White;
+            this.mLabel.Location = new System.Drawing.Point(539, 103);
+            this.mLabel.Name = "mLabel";
+            this.mLabel.Size = new System.Drawing.Size(80, 21);
+            this.mLabel.TabIndex = 17;
+            this.mLabel.Text = "Minute";
             // 
-            // hourLable
+            // hLabel
             // 
-            this.hourLable.AutoSize = true;
-            this.hourLable.BackColor = System.Drawing.Color.Black;
-            this.hourLable.Font = new System.Drawing.Font("LIBRARY 3 AM", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hourLable.ForeColor = System.Drawing.Color.White;
-            this.hourLable.Location = new System.Drawing.Point(273, 30);
-            this.hourLable.Name = "hourLable";
-            this.hourLable.Size = new System.Drawing.Size(70, 24);
-            this.hourLable.TabIndex = 18;
-            this.hourLable.Text = "Hour";
+            this.hLabel.AutoSize = true;
+            this.hLabel.BackColor = System.Drawing.Color.Black;
+            this.hLabel.Font = new System.Drawing.Font("LIBRARY 3 AM", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hLabel.ForeColor = System.Drawing.Color.White;
+            this.hLabel.Location = new System.Drawing.Point(311, 105);
+            this.hLabel.Name = "hLabel";
+            this.hLabel.Size = new System.Drawing.Size(61, 21);
+            this.hLabel.TabIndex = 18;
+            this.hLabel.Text = "Hour";
             // 
             // editButton
             // 
@@ -92,9 +98,9 @@
             this.editButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ForeColor = System.Drawing.Color.White;
-            this.editButton.Location = new System.Drawing.Point(393, 420);
+            this.editButton.Location = new System.Drawing.Point(393, 398);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(144, 74);
+            this.editButton.Size = new System.Drawing.Size(144, 54);
             this.editButton.TabIndex = 19;
             this.editButton.Text = "Edit";
             this.editButton.UseVisualStyleBackColor = false;
@@ -105,9 +111,9 @@
             this.deleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.Color.White;
-            this.deleteButton.Location = new System.Drawing.Point(543, 420);
+            this.deleteButton.Location = new System.Drawing.Point(543, 398);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(144, 74);
+            this.deleteButton.Size = new System.Drawing.Size(144, 54);
             this.deleteButton.TabIndex = 20;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
@@ -118,23 +124,77 @@
             this.setButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.setButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setButton.ForeColor = System.Drawing.Color.White;
-            this.setButton.Location = new System.Drawing.Point(243, 420);
+            this.setButton.Location = new System.Drawing.Point(243, 398);
             this.setButton.Name = "setButton";
-            this.setButton.Size = new System.Drawing.Size(144, 74);
+            this.setButton.Size = new System.Drawing.Size(144, 54);
             this.setButton.TabIndex = 21;
             this.setButton.Text = "Set";
             this.setButton.UseVisualStyleBackColor = false;
+            this.setButton.Click += new System.EventHandler(this.setButton_Click);
             // 
-            // textBox1
+            // exitButton
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Black;
-            this.textBox1.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(214, 146);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(510, 263);
-            this.textBox1.TabIndex = 22;
+            this.exitButton.BackColor = System.Drawing.Color.Black;
+            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Location = new System.Drawing.Point(328, 458);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(278, 54);
+            this.exitButton.TabIndex = 23;
+            this.exitButton.Text = "exit";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // alarmlistBox
+            // 
+            this.alarmlistBox.BackColor = System.Drawing.Color.Black;
+            this.alarmlistBox.Font = new System.Drawing.Font("LIBRARY 3 AM", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alarmlistBox.ForeColor = System.Drawing.Color.White;
+            this.alarmlistBox.FormattingEnabled = true;
+            this.alarmlistBox.ItemHeight = 24;
+            this.alarmlistBox.Location = new System.Drawing.Point(243, 183);
+            this.alarmlistBox.Name = "alarmlistBox";
+            this.alarmlistBox.Size = new System.Drawing.Size(444, 196);
+            this.alarmlistBox.TabIndex = 24;
+            // 
+            // timer
+            // 
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // hourLabel
+            // 
+            this.hourLabel.AutoSize = true;
+            this.hourLabel.Font = new System.Drawing.Font("LIBRARY 3 AM", 28.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hourLabel.ForeColor = System.Drawing.Color.White;
+            this.hourLabel.Location = new System.Drawing.Point(377, 22);
+            this.hourLabel.Name = "hourLabel";
+            this.hourLabel.Size = new System.Drawing.Size(84, 58);
+            this.hourLabel.TabIndex = 25;
+            this.hourLabel.Text = "10";
+            // 
+            // minuteLabel
+            // 
+            this.minuteLabel.AutoSize = true;
+            this.minuteLabel.Font = new System.Drawing.Font("LIBRARY 3 AM", 28.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minuteLabel.ForeColor = System.Drawing.Color.White;
+            this.minuteLabel.Location = new System.Drawing.Point(486, 22);
+            this.minuteLabel.Name = "minuteLabel";
+            this.minuteLabel.Size = new System.Drawing.Size(84, 58);
+            this.minuteLabel.TabIndex = 25;
+            this.minuteLabel.Text = "10";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("LIBRARY 3 AM", 28.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.White;
+            this.label.Location = new System.Drawing.Point(454, 22);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(38, 58);
+            this.label.TabIndex = 25;
+            this.label.Text = ":";
             // 
             // AlarmForm
             // 
@@ -142,12 +202,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(938, 539);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.minuteLabel);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.hourLabel);
+            this.Controls.Add(this.alarmlistBox);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.setButton);
-            this.Controls.Add(this.minutesLabel);
-            this.Controls.Add(this.hourLable);
+            this.Controls.Add(this.mLabel);
+            this.Controls.Add(this.hLabel);
             this.Controls.Add(this.minutesCB);
             this.Controls.Add(this.hourCB);
             this.Name = "AlarmForm";
@@ -162,11 +226,16 @@
 
         private System.Windows.Forms.ComboBox minutesCB;
         private System.Windows.Forms.ComboBox hourCB;
-        private System.Windows.Forms.Label minutesLabel;
-        private System.Windows.Forms.Label hourLable;
+        private System.Windows.Forms.Label mLabel;
+        private System.Windows.Forms.Label hLabel;
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button setButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.ListBox alarmlistBox;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label hourLabel;
+        private System.Windows.Forms.Label minuteLabel;
+        private System.Windows.Forms.Label label;
     }
 }

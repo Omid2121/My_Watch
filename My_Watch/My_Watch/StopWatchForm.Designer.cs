@@ -41,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.hoursLable = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // resetButton
@@ -179,12 +180,27 @@
             this.label5.TabIndex = 6;
             this.label5.Text = ".";
             // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Black;
+            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Location = new System.Drawing.Point(324, 447);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(278, 56);
+            this.exitButton.TabIndex = 26;
+            this.exitButton.Text = "exit";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // StopWatchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(927, 527);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.centiSLable);
             this.Controls.Add(this.secoundsLable);
             this.Controls.Add(this.label2);
@@ -218,5 +234,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label hoursLable;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button exitButton;
     }
 }

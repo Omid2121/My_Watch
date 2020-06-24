@@ -36,7 +36,6 @@ namespace My_Watch
             {
                 this.hourCB.Items.Add(i.ToString());
                 this.hourCB.SelectedIndex = 0;
-
             }
         }
 
@@ -65,7 +64,7 @@ namespace My_Watch
 
         private void resetButton_Click(object sender, EventArgs e)
         {
-            ts = new TimeSpan(0,0,0);
+            ts = new TimeSpan(0, 0, 0);
             hourCB.SelectedIndex = 0;
             minutesCB.SelectedIndex = 0;
             secondsCB.SelectedIndex = 0;
@@ -78,11 +77,18 @@ namespace My_Watch
             timeLable.Text = string.Format("{0:00}.{1:00}.{2:00}",
                 ts.Hours, ts.Minutes, ts.Seconds);
 
-            if (ts.Hours == 0 && ts.Minutes == 0 && ts.Seconds == 0 )
+            if (ts.Hours ==0 && ts.Minutes == 0 && ts.Seconds==0)
             {
-                MessageBox.Show("Time's up!");         
                 countdownTimer.Stop();
+                MessageBox.Show("Time's up!");         
             }
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Menu openForm = new Menu();
+            openForm.Show();
+            Visible = false;
         }
 
         private void addButton_Click(object sender, EventArgs e)

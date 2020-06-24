@@ -45,6 +45,5 @@ namespace My_Watch
             openForm.Show();
             Visible = false;
         }
-
     }
 }

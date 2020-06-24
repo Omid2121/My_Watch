@@ -77,6 +77,11 @@ namespace My_Watch
             hoursLable.Text = String.Format("{0:00}", stopwatch.hours);
         }
 
-
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Menu openForm = new Menu();
+            openForm.Show();
+            Visible = false;
+        }
     }
 }

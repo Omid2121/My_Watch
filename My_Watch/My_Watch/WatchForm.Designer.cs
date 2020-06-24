@@ -34,6 +34,7 @@
             this.dateLable = new System.Windows.Forms.Label();
             this.hourLable = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dayLable
@@ -86,12 +87,27 @@
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Black;
+            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.ForeColor = System.Drawing.Color.White;
+            this.exitButton.Location = new System.Drawing.Point(325, 478);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(278, 56);
+            this.exitButton.TabIndex = 25;
+            this.exitButton.Text = "exit";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // WatchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(969, 557);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.dayLable);
             this.Controls.Add(this.secondLable);
             this.Controls.Add(this.dateLable);
@@ -111,5 +127,6 @@
         private System.Windows.Forms.Label dateLable;
         private System.Windows.Forms.Label hourLable;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button exitButton;
     }
 }
