@@ -1,80 +1,47 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace My_Watch
 {
     public partial class StopWatchForm : Form
     {
-        StopWatch stopwatch = new StopWatch();
+        MyStopWatch myStopwatch = new MyStopWatch();
 
         public StopWatchForm()
         {
             InitializeComponent();
-        }
-
-        private void StopWatchForm_Load(object sender, EventArgs e)
-        {
-            ResetTime();
-            stopwatch.isActive = false;
+            lapButton.Enabled = false;
         }
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            stopwatch.isActive = true;
+            myStopwatch.stopwatch.Start();
+            lapButton.Enabled = true;
         }
 
         private void stopButton_Click(object sender, EventArgs e)
         {
-            stopwatch.isActive = false;
+            myStopwatch.stopwatch.Stop();
         }
 
         private void resetButton_Click(object sender, EventArgs e)
         {
-            stopwatch.isActive = false;
-            ResetTime();
-        }
-
-        private void ResetTime()
-        {
-            stopwatch.centiSeconds = 0;
-            stopwatch.seconds = 0;
-            stopwatch.minutes = 0;
-            stopwatch.hours = 0;
+            myStopwatch.stopwatch.Reset();
+            lapsListBox.Items.Clear();
         }
 
         private void stopWatchTimer_Tick(object sender, EventArgs e)
         {
-            if (stopwatch.isActive)
-            {
-                stopwatch.centiSeconds++;
-
-                if (stopwatch.centiSeconds >= 100)
-                {
-                    stopwatch.seconds++;
-                    stopwatch.centiSeconds = 0;
-
-                    if (stopwatch.seconds >= 60)
-                    {
-                        stopwatch.minutes++;
-                        stopwatch.seconds = 0;
-
-                        if (stopwatch.minutes >= 60)
-                        {
-                            stopwatch.hours++;
-                            stopwatch.minutes = 0;
-                        }
-                    }
-                }
-            }
             DrawTime();
         }
 
         private void DrawTime()
         {
-            centiSLable.Text = String.Format("{0:00}", stopwatch.centiSeconds);
-            secoundsLable.Text = String.Format("{0:00}", stopwatch.seconds);
-            minutesLable.Text = String.Format("{0:00}", stopwatch.minutes);
-            hoursLable.Text = String.Format("{0:00}", stopwatch.hours);
+            centiSLable.Text = String.Format("{0:00}", myStopwatch.stopwatch.Elapsed.Milliseconds);
+            secoundsLable.Text = String.Format("{0:00}", myStopwatch.stopwatch.Elapsed.Seconds);
+            minutesLable.Text = String.Format("{0:00}", myStopwatch.stopwatch.Elapsed.Minutes);
+            hoursLable.Text = String.Format("{0:00}", myStopwatch.stopwatch.Elapsed.Hours);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -82,6 +49,11 @@ namespace My_Watch
             Menu openForm = new Menu();
             openForm.Show();
             Visible = false;
+        }
+
+        private void lapButton_Click(object sender, EventArgs e)
+        {
+            lapsListBox.Items.Add(myStopwatch.CreateLap());
         }
     }
 }

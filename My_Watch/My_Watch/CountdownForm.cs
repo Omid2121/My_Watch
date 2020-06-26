@@ -16,6 +16,23 @@ namespace My_Watch
         TimeSpan ts;
         int hours, minutes, seconds;
 
+        public int Seconds
+        {
+            get { return seconds; }
+            set
+            {
+                seconds = value;
+                if(seconds <= 0)
+                {
+                    seconds = 0;
+                }
+                if (seconds >= 59)
+                {
+                    seconds = 59;
+                }
+            }
+        }
+
         public CountdownForm()
         {
             InitializeComponent();
@@ -45,11 +62,13 @@ namespace My_Watch
             {
                 hours = Convert.ToInt32(hourCB.Text);
                 minutes = Convert.ToInt32(minutesCB.Text);
-                seconds = Convert.ToInt32(secondsCB.Text);
+                Seconds = Convert.ToInt32(secondsCB.Text);
+                ts = new TimeSpan(hours, minutes, Seconds);
+            }
 
-                ts = new TimeSpan(hours, minutes, seconds);
-
-                countdownTimer.Start();
+            if (ts.Hours == 0 && ts.Minutes == 0 && ts.Seconds == 0)
+            {
+                //countdownTimer.Start();
             }
             else
             {
@@ -68,6 +87,9 @@ namespace My_Watch
             hourCB.SelectedIndex = 0;
             minutesCB.SelectedIndex = 0;
             secondsCB.SelectedIndex = 0;
+            countdownTimer.Stop();
+            timeLable.Text = "00.00.00";
+
         }
 
         private void countdownTimer_Tick(object sender, EventArgs e)

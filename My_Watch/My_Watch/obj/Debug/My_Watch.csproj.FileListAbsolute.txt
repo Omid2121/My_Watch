@@ -12,3 +12,4 @@ C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.St
 C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.AlarmForm.resources
 C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.CountdownForm.resources
 C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.csprojAssemblyReference.cache
+C:\Users\omid_\Documents\GitHub\My_Watch\My_Watch\My_Watch\obj\Debug\My_Watch.AnalogForm.resources

@@ -26,9 +26,8 @@ namespace My_Watch
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            DialogResult iExit;   
-                Application.Exit();
-            
+            DialogResult iExit;
+            Application.Exit();
         }
 
         private void countDownButton_Click(object sender, EventArgs e)
@@ -38,10 +37,16 @@ namespace My_Watch
             Visible = false;
         }
 
-
         private void alarmButton_Click(object sender, EventArgs e)
         {
             AlarmForm openForm = new AlarmForm();
+            openForm.Show();
+            Visible = false;
+        }
+
+        private void analogButton_Click(object sender, EventArgs e)
+        {
+            AnalogForm openForm = new AnalogForm();
             openForm.Show();
             Visible = false;
         }

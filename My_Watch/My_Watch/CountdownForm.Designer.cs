@@ -222,7 +222,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(914, 530);
+            this.ClientSize = new System.Drawing.Size(905, 530);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.addMinbutton);
             this.Controls.Add(this.addSecButton);

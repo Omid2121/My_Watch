@@ -35,6 +35,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.alarmButton = new System.Windows.Forms.Button();
             this.countDownButton = new System.Windows.Forms.Button();
+            this.analogButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,9 +45,9 @@
             this.watchButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.watchButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.watchButton.ForeColor = System.Drawing.Color.White;
-            this.watchButton.Location = new System.Drawing.Point(276, 320);
+            this.watchButton.Location = new System.Drawing.Point(275, 325);
             this.watchButton.Name = "watchButton";
-            this.watchButton.Size = new System.Drawing.Size(209, 59);
+            this.watchButton.Size = new System.Drawing.Size(209, 52);
             this.watchButton.TabIndex = 0;
             this.watchButton.Text = "Clock";
             this.watchButton.UseVisualStyleBackColor = false;
@@ -58,9 +59,9 @@
             this.stopWatchButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stopWatchButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stopWatchButton.ForeColor = System.Drawing.Color.White;
-            this.stopWatchButton.Location = new System.Drawing.Point(276, 390);
+            this.stopWatchButton.Location = new System.Drawing.Point(275, 387);
             this.stopWatchButton.Name = "stopWatchButton";
-            this.stopWatchButton.Size = new System.Drawing.Size(209, 59);
+            this.stopWatchButton.Size = new System.Drawing.Size(209, 52);
             this.stopWatchButton.TabIndex = 0;
             this.stopWatchButton.Text = "Stopwatch";
             this.stopWatchButton.UseVisualStyleBackColor = false;
@@ -72,9 +73,9 @@
             this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exitButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.White;
-            this.exitButton.Location = new System.Drawing.Point(351, 459);
+            this.exitButton.Location = new System.Drawing.Point(366, 506);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(278, 66);
+            this.exitButton.Size = new System.Drawing.Size(247, 52);
             this.exitButton.TabIndex = 0;
             this.exitButton.Text = "exit";
             this.exitButton.UseVisualStyleBackColor = false;
@@ -83,7 +84,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(376, 111);
+            this.pictureBox1.Location = new System.Drawing.Point(374, 108);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(224, 182);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -96,9 +97,9 @@
             this.alarmButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.alarmButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alarmButton.ForeColor = System.Drawing.Color.White;
-            this.alarmButton.Location = new System.Drawing.Point(491, 320);
+            this.alarmButton.Location = new System.Drawing.Point(490, 326);
             this.alarmButton.Name = "alarmButton";
-            this.alarmButton.Size = new System.Drawing.Size(209, 59);
+            this.alarmButton.Size = new System.Drawing.Size(209, 52);
             this.alarmButton.TabIndex = 0;
             this.alarmButton.Text = "Alarm";
             this.alarmButton.UseVisualStyleBackColor = false;
@@ -110,13 +111,27 @@
             this.countDownButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.countDownButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countDownButton.ForeColor = System.Drawing.Color.White;
-            this.countDownButton.Location = new System.Drawing.Point(491, 390);
+            this.countDownButton.Location = new System.Drawing.Point(490, 387);
             this.countDownButton.Name = "countDownButton";
-            this.countDownButton.Size = new System.Drawing.Size(209, 59);
+            this.countDownButton.Size = new System.Drawing.Size(209, 52);
             this.countDownButton.TabIndex = 0;
             this.countDownButton.Text = "Countdown";
             this.countDownButton.UseVisualStyleBackColor = false;
             this.countDownButton.Click += new System.EventHandler(this.countDownButton_Click);
+            // 
+            // analogButton
+            // 
+            this.analogButton.BackColor = System.Drawing.Color.Black;
+            this.analogButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.analogButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.analogButton.ForeColor = System.Drawing.Color.White;
+            this.analogButton.Location = new System.Drawing.Point(319, 447);
+            this.analogButton.Name = "analogButton";
+            this.analogButton.Size = new System.Drawing.Size(336, 52);
+            this.analogButton.TabIndex = 0;
+            this.analogButton.Text = "Analog clock";
+            this.analogButton.UseVisualStyleBackColor = false;
+            this.analogButton.Click += new System.EventHandler(this.analogButton_Click);
             // 
             // Menu
             // 
@@ -126,6 +141,7 @@
             this.ClientSize = new System.Drawing.Size(971, 570);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.analogButton);
             this.Controls.Add(this.countDownButton);
             this.Controls.Add(this.alarmButton);
             this.Controls.Add(this.stopWatchButton);
@@ -145,6 +161,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button alarmButton;
         private System.Windows.Forms.Button countDownButton;
+        private System.Windows.Forms.Button analogButton;
     }
 }
 
