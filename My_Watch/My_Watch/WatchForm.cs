@@ -25,11 +25,6 @@ namespace My_Watch
             secondLable.Location = new Point(hourLable.Location.X + hourLable.Width, secondLable.Location.Y);
         }
 
-        private void secondLable_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void exitButton_Click(object sender, EventArgs e)
         {
             Menu openForm = new Menu();

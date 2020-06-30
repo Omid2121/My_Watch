@@ -68,7 +68,6 @@ namespace My_Watch
 
             if (ts.Hours == 0 && ts.Minutes == 0 && ts.Seconds == 0)
             {
-                //countdownTimer.Start();
             }
             else
             {

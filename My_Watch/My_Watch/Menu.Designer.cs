@@ -45,7 +45,7 @@
             this.watchButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.watchButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.watchButton.ForeColor = System.Drawing.Color.White;
-            this.watchButton.Location = new System.Drawing.Point(275, 325);
+            this.watchButton.Location = new System.Drawing.Point(275, 329);
             this.watchButton.Name = "watchButton";
             this.watchButton.Size = new System.Drawing.Size(209, 52);
             this.watchButton.TabIndex = 0;
@@ -59,7 +59,7 @@
             this.stopWatchButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stopWatchButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stopWatchButton.ForeColor = System.Drawing.Color.White;
-            this.stopWatchButton.Location = new System.Drawing.Point(275, 387);
+            this.stopWatchButton.Location = new System.Drawing.Point(275, 388);
             this.stopWatchButton.Name = "stopWatchButton";
             this.stopWatchButton.Size = new System.Drawing.Size(209, 52);
             this.stopWatchButton.TabIndex = 0;
@@ -97,7 +97,7 @@
             this.alarmButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.alarmButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alarmButton.ForeColor = System.Drawing.Color.White;
-            this.alarmButton.Location = new System.Drawing.Point(490, 326);
+            this.alarmButton.Location = new System.Drawing.Point(490, 330);
             this.alarmButton.Name = "alarmButton";
             this.alarmButton.Size = new System.Drawing.Size(209, 52);
             this.alarmButton.TabIndex = 0;
@@ -111,7 +111,7 @@
             this.countDownButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.countDownButton.Font = new System.Drawing.Font("LIBRARY 3 AM", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countDownButton.ForeColor = System.Drawing.Color.White;
-            this.countDownButton.Location = new System.Drawing.Point(490, 387);
+            this.countDownButton.Location = new System.Drawing.Point(490, 388);
             this.countDownButton.Name = "countDownButton";
             this.countDownButton.Size = new System.Drawing.Size(209, 52);
             this.countDownButton.TabIndex = 0;
@@ -129,7 +129,7 @@
             this.analogButton.Name = "analogButton";
             this.analogButton.Size = new System.Drawing.Size(336, 52);
             this.analogButton.TabIndex = 0;
-            this.analogButton.Text = "Analog clock";
+            this.analogButton.Text = "Roman Clock";
             this.analogButton.UseVisualStyleBackColor = false;
             this.analogButton.Click += new System.EventHandler(this.analogButton_Click);
             // 

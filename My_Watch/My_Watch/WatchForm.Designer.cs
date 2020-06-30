@@ -58,7 +58,6 @@
             this.secondLable.Size = new System.Drawing.Size(106, 73);
             this.secondLable.TabIndex = 2;
             this.secondLable.Text = "10";
-            this.secondLable.Click += new System.EventHandler(this.secondLable_Click);
             // 
             // dateLable
             // 
